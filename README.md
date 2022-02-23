@@ -32,7 +32,7 @@ Aelf Pixels is an NFT contract deployed in Aelf blockchain. This contract is imp
     * [**aelf-sdk.js**](https://github.com/AElfProject/aelf-sdk.js) - Javascript development kit for interacting with an AElf node;
     * [**aelf-boilerplate**](https://github.com/AElfProject/aelf-boilerplate) - an environment for smart contract and dApp development;
     * [**aelf-command**](https://github.com/AElfProject/aelf-command) - CLI tool for interacting with an AElf node and wallet;
-    * [**aelf-web-extension**]() - Web extension for interacting with a smart contract through dApp;
+    * [**aelf-web-extension**](https://github.com/AElfProject/aelf-web-extension) - Web extension for interacting with a smart contract through dApp;
 2. [**Infura IPFS**](https://infura.io/product/ipfs);
 3. [**Three.js**](https://threejs.org) - Library for creating the 3D gallery;
 4. [**cannon.js**](https://github.com/schteppe/cannon.js) - Lightweight 3D physics for the web;
