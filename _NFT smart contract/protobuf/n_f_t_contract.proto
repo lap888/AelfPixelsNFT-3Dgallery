@@ -1,0 +1,123 @@
+syntax = "proto3";
+
+import "aelf/core.proto";
+import "aelf/options.proto";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+option csharp_namespace = "AELf.Contracts.NFT";
+
+service NFTContract {
+
+    option (aelf.csharp_state) = "NFTContractState";
+
+    rpc Initialize (InitializeInput) returns (google.protobuf.Empty) { }
+
+    rpc Transfer (TransferInput) returns (google.protobuf.Empty) { }
+
+    rpc SetBaseURI (BaseUriInput) returns (google.protobuf.Empty) { }
+    
+    rpc SetTokenURI (SetTokenUriInput) returns (google.protobuf.Empty) { }
+    
+    rpc MintNft (MintNftInput) returns (google.protobuf.Int64Value) { }
+
+    
+    rpc GetCollectionName (google.protobuf.Empty) returns (google.protobuf.StringValue){
+        option (aelf.is_view) = true;
+    }
+
+    rpc GetCollectionSymbol (google.protobuf.Empty) returns (google.protobuf.StringValue){
+        option (aelf.is_view) = true;
+    }
+
+    rpc GetCount (google.protobuf.Empty) returns (GetCountOutput){
+        option (aelf.is_view) = true;
+    }
+    
+    rpc GetBaseURI (google.protobuf.Empty) returns (google.protobuf.StringValue){
+        option (aelf.is_view) = true;
+    }
+
+    rpc GetTokenURI (google.protobuf.Int64Value) returns (TokenInfo){
+        option (aelf.is_view) = true;
+    }
+    
+    rpc GetBalanceOf(AddressMsg) returns (google.protobuf.Int64Value){
+        option (aelf.is_view) = true;
+    }
+
+    rpc GetOwnerOf(google.protobuf.Int64Value) returns (AddressMsg){
+        option (aelf.is_view) = true;
+    }
+    
+    rpc GetAllTokensOfOwner(AllTokensOfOwnerInput) returns (AllTokensOfOwner){
+        option (aelf.is_view) = true;
+    }
+}
+
+message NftCollection {
+    string name = 1;
+    string symbol = 2;
+}
+
+message AddressMsg {
+    aelf.Address address = 1;
+}
+
+// Inputs
+message InitializeInput{
+    string name = 1;
+    string symbol = 2;
+    string baseUri = 3;
+}
+
+message BaseUriInput {
+    string baseUri = 1;    
+}
+
+message SetTokenUriInput {
+    int64 tokenId = 1;
+    string uri = 2;
+}
+
+message MintNftInput{
+    aelf.Address to = 1;
+    string uri = 2;
+}
+
+message TransferInput {
+    aelf.Address to = 1;
+    int64 tokenId = 2;
+}
+
+message AllTokensOfOwnerInput {
+    aelf.Address owner = 1;
+}
+
+// Output
+message GetCountOutput {
+    string value = 1;
+}
+
+message TokenInfo {
+    string uri = 1;
+}
+
+message AllTokensOfOwner {
+    repeated int64 tokensIds = 1;
+}
+
+// Events
+message Transfer {
+    option(aelf.is_event) = true;
+    aelf.Address from = 1;
+    aelf.Address to = 2;
+    int64 tokenId = 3;
+}
+
+message Mint {
+    option(aelf.is_event) = true;
+    aelf.Address to = 1;
+    int64 tokenId = 2;
+}
