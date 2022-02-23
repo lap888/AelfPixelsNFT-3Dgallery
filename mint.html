@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aelf Pixels - Mint</title>
+	<link rel="shortcut icon" href="./images/favicon.ico">
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/styles-mint.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet"> 
+	<script src="https://cdn.jsdelivr.net/npm/ipfs-core/dist/index.min.js"></script>
+	<script src="./js/font-awesome.js" crossorigin="anonymous"></script>
+	<script src="./js/bundle.js"></script>
+
+</head>
+<body>
+	
+	<header>
+		<div class="wrapper">
+			<nav>
+				<ul class="menu">
+					<li><a href="./">Home</a></li>
+					<li class="active"><a href="./mint.html">Mint NFT</a></li>
+					<li><a href="./my-nfts.html">My NFTs</a></li>
+					<li><a href="./gallery.html">Go to 3D gallery</a></li>
+				</ul>
+
+				<div class="account">
+					<img id="source" src="./images/aelf_logo.svg">
+					<div class="wallet" id="walletDiv">
+						<div id="login-btn">
+							<div id="loginDiv">
+								<a class="btn">Connect wallet</a>
+							</div>
+
+							<div id="logoutDiv" class="hidden">
+								<span id="addressDiv"></span>
+								<a class="btn" id="logout-btn">Logout <i class="fas fa-sign-out-alt"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	
+	<main>
+		<div class="wrapper">
+			<div class="content">
+				<h1>Mint new Aelf Pixel</h1>
+
+				<div class="flex">
+
+					<div class="left">
+						<canvas id="canvas" class="hidden" height="500" width="500"></canvas><br>
+					</div>
+				
+
+					<div class="right">
+		            	<label for=""><b>Colors range [from 2 to 15]:</b></label><br><br>
+			            <div class="parameter">
+			            	<input type="range" id="nrColors" min="2" max="15" value="5" oninput="checkColorsRange(this)"><output>5</output>
+			            </div>
+
+			            <br><br>
+
+			            <label for=""><b>Pizel size [from 15 to 20]:</b></label><br><br>
+			            <div class="parameter">
+			            	<input type="range" id="sizeOfPixel" min="15" max="30" value="20" oninput="checkPixelSize(this)"><output>20</output>
+			            </div>
+
+			            <br><br>
+
+			            <button id="generateButton">Generate new Pixel</button>
+			            <button  id="mintButton" class="hidden">Mint this Pixel!</button><br>
+
+			            <div id="resultMint"></div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="wrapper">
+			<div>
+				<p><u><b>AElf Pixels</b></u> - become a owner of unique NFT items on Aelf blockchain</p><br>
+				<p>&copy;  2022</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="./js/sweetalert.js"></script>
+	<script src="./js/script.js"></script>
+	<script src="./js/script-mint.js"></script>
+</body>
+
+</html>

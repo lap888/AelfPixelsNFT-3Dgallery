@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aelf Pixels - Home</title>
+	<link rel="shortcut icon" href="./images/favicon.ico">
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/styles-home.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet"> 
+
+	<script src="./js/font-awesome.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+	<header>
+		<div class="wrapper">
+			<nav>
+				<ul class="menu">
+					<li class="active"><a href="./">Home</a></li>
+					<li><a href="./mint.html">Mint NFT</a></li>
+					<li><a href="./my-nfts.html">My NFTs</a></li>
+					<li><a href="./gallery.html">Go to 3D gallery</a></li>
+				</ul>
+
+				<div class="account">
+					<img src="./images/aelf_logo.svg">
+					<div class="wallet" id="walletDiv">
+						<div id="login-btn">
+							<div id="loginDiv">
+								<a class="btn">Connect wallet</a>
+							</div>
+
+							<div id="logoutDiv" class="hidden">
+								<span id="addressDiv"></span>
+								<a class="btn" id="logout-btn">Logout <i class="fas fa-sign-out-alt"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	
+	<main>
+		<div class="wrapper">
+			<div class="content">
+				<div class="flex">
+
+					<div class="left">
+						<h2>Aelf Pixels - </h2>
+						
+						<p>Mint and become a owner of unique NFT items on Aelf blockchain that you can admire in a 3D gallery or send to others.</p>
+
+						<a href="./mint.html"><button>Mint now !</button></a>
+					</div>
+
+					<div class="right">
+						<img id="pixel-demo" src="./images/pixels/1.png" >
+					</div>
+
+				</div>
+			</div>
+
+			<div class="content">
+				<h1>Roadmap</h1><br>
+
+				<div class="roadmap">
+					<div class="article done">
+						<div class="status"><i class="fa-solid fa-check"></i></div>
+						<div class="title">Creation of a 3D gallery in order to admire the Aelf Pixels NFTs;</div>
+					</div>
+
+					<div class="article">
+						<div class="status"><i class="fa-solid fa-spinner"></i></div>
+						<div class="title">Improve the design of the gallery, add new buildings and the ability to interact with some objects directly from the gallery;</div>
+					</div>
+
+					<div class="article">
+						<div class="status"><i class="fa-solid fa-spinner"></i></div>
+						<div class="title">and other...</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</main>
+
+	<footer>
+		<div class="wrapper">
+			<div>
+				<p><u><b>AElf Pixels</b></u> - become a owner of unique NFT items on Aelf blockchain</p><br>
+				<p>&copy;  2022</p>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="./js/sweetalert.js"></script>
+	<script src="./js/script.js"></script>
+	<script src="./js/home.js"></script>
+</body>
+
+</html>
