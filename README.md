@@ -15,7 +15,7 @@
 
 ### Project description:
 
-Aelf Pixels is an NFT contract deployed in Aelf blockchain. This contract is analogous and was created according to the ERC-721 standard (standard that describes how to build non-fungible tokens on the EVM blockchains). One of the differences is this: in EVM networks, contracts are written in Solidity, but in AELF they are written in C#.
+Aelf Pixels is an NFT contract deployed in Aelf blockchain. This contract is implementation of ERC-721 standard (standard that describes how to build non-fungible tokens on the EVM blockchains). One of the differences is this: in EVM networks, contracts are written in Solidity, but in AELF they are written in C#.
 
 #### Description of project sections:
 
