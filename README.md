@@ -9,7 +9,7 @@
 ### Presentation:
 
 - Live demo: [https://aelf-nft-pixels.netlify.app](https://aelf-nft-pixels.netlify.app)
-- Video demo: [link](link)
+- Video demo: [https://www.youtube.com/watch?v=wCjArQlgfng](https://www.youtube.com/watch?v=wCjArQlgfng)
 
 ----------
 
